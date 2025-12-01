@@ -1,0 +1,50 @@
+# -------------------------------------------------------------------
+# 1. DEPENDENCIAS DE PAQUETES (NODEMODULES)
+# Ignora las carpetas node_modules en ambos proyectos.
+# -------------------------------------------------------------------
+/server/node_modules
+/client/node_modules
+
+# -------------------------------------------------------------------
+# 2. ARTEFACTOS DE BASE DE DATOS (SERVER)
+# Ignora el archivo de la DB de SQLite en el servidor.
+# La ruta real es: /server/db/gestor-xarxa.db
+# -------------------------------------------------------------------
+/server/db/gestor-xarxa.db
+# Por si usas archivos de prueba:
+/server/db/*.sqlite
+/server/db/*.db
+
+# -------------------------------------------------------------------
+# 3. ARCHIVOS DE CONFIGURACIÓN Y ENTORNO (SENSIBLES)
+# Esto es crítico para la seguridad.
+# -------------------------------------------------------------------
+.env
+.env.local
+/server/.env
+/server/pnpm-lock.yaml
+/client/.env
+
+# -------------------------------------------------------------------
+# 4. ARTEFACTOS DE COMPILACIÓN (CLIENT)
+# Ignora la carpeta de compilación final de React (client).
+# -------------------------------------------------------------------
+/client/build
+/client/dist
+
+# -------------------------------------------------------------------
+# 5. LOGS Y CACHÉ
+# -------------------------------------------------------------------
+npm-debug.log*
+.npm
+*.log
+# Archivos de caché
+.cache
+.pnpm-store # Si usas pnpm a nivel global/raíz
+
+# -------------------------------------------------------------------
+# 6. ARCHIVOS DE SISTEMA E IDE
+# -------------------------------------------------------------------
+.DS_Store
+.vscode/
+.idea/
